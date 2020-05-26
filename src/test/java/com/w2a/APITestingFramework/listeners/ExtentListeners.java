@@ -5,8 +5,8 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Date;
 
-//import javax.mail.MessagingException;
-//import javax.mail.internet.AddressException;
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -20,8 +20,8 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-//import com.w2a.APITestingFramework.utilities.MonitoringMail;
-//import com.w2a.APITestingFramework.utilities.TestConfig;
+import com.w2a.APITestingFramework.utilities.MonitoringMail;
+import com.w2a.APITestingFramework.utilities.TestConfig;
 
 
 
@@ -116,7 +116,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 			e.printStackTrace();
 		}
 		
-		/*MonitoringMail mail = new MonitoringMail();
+		MonitoringMail mail = new MonitoringMail();
 		try {
 			mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject, messageBody);
 		} catch (AddressException e) {
@@ -125,7 +125,7 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 		} catch (MessagingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 
 		
 	}
