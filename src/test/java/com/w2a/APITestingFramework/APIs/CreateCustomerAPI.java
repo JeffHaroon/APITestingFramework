@@ -11,7 +11,8 @@ import io.restassured.response.Response;
 public class CreateCustomerAPI extends BaseTest {
 
 	public static Response sendPostRequestToCreateCustomerAPIWithValidAuthKey(Hashtable<String, String> data) {
-
+//Adding a comment to see if it shows up in GIT
+//and Jenkins execution starts after check-in
 		Response response = given().auth().basic(config.getProperty("validSecretKey"), "")
 				.formParam("name", data.get("name")).formParam("email", data.get("email"))
 				.formParam("description", data.get("description")).post(config.getProperty("customerAPIEndPoint"));
